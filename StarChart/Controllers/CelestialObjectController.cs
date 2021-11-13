@@ -38,7 +38,7 @@ namespace StarChart.Controllers
         }
 
 
-        [HttpGet("{name}", Name = "GetByName")]
+        [HttpGet("{name}")]
         public IActionResult GetByName(string name)
         {
             var celestial_obj = _context.CelestialObjects
