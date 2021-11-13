@@ -42,7 +42,8 @@ namespace StarChart.Controllers
         public IActionResult GetByName(string name)
         {
             var celestial_objs = _context.CelestialObjects
-                .Where(co => co.Name == name);
+                .Where(co => co.Name == name)
+                .ToList();
             if (celestial_objs == null)
             {
                 return NotFound();
